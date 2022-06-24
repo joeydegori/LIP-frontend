@@ -32,14 +32,11 @@ const Login = () => {
 
     const submitFormData = async () => {
         try {
-            // console.log({ isLoadingBefore: isLoading });
             setIsLoading(true);
-            // console.log({ isLoadingAfter: isLoading });
             const { data } = await axios.post(
                 `https://life-in-photos-2022.herokuapp.com/${loginState}`,
                 formData
             );
-            // console.log({ data });
             setUser(() => data);
             localStorage.setItem('token', JSON.stringify(data.token));
             setIsLoading(false);
@@ -93,10 +90,25 @@ const Login = () => {
         marginTop: '30px',
         transform: 'rotate(20deg)',
     };
-    console.log({ isLoading });
+
+    const loadingStyle = {
+        fontFamily: 'Joan',
+        color: '#fbf9f2',
+    };
+
+    const divStyle = {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '70vh',
+    };
 
     if (isLoading) {
-        return <div>Loading ...</div>;
+        return (
+            <div style={divStyle}>
+                <h1 style={loadingStyle}>Loading...</h1>
+            </div>
+        );
     }
 
     return user ? (
@@ -110,7 +122,6 @@ const Login = () => {
     ) : (
         <div>
             <h1 className='loginState'>{loginState}</h1>
-            {/* <p style={buttonLettersStyle}>Please Register/Login</p> */}
             <button
                 className='loginButton'
                 onClick={() => setLoginState('Login')}
