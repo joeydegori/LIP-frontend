@@ -31,7 +31,7 @@ const Login = () => {
     const submitFormData = async () => {
         try {
             const { data } = await axios.post(
-                `http://localhost:5005/${loginState}`,
+                `https://life-in-photos-2022.herokuapp.com/${loginState}`,
                 formData
             );
             setUser(() => data);

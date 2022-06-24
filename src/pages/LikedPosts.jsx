@@ -11,7 +11,7 @@ const LikedPosts = () => {
     const getLikedPosts = async () => {
         try {
             const { data } = await authAxios.get(
-                `http://localhost:5005/photos/getLikedPosts`
+                `https://life-in-photos-2022.herokuapp.com/photos/getLikedPosts`
             );
             setLikes(() => data.likedposts);
         } catch (error) {

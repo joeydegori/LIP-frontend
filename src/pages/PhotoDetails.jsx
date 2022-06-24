@@ -29,7 +29,7 @@ const PhotoDetails = () => {
 
     const getPhotoDetails = async () => {
         const { data } = await authAxios.get(
-            `http://localhost:5005/photos/${id}`
+            `https://life-in-photos-2022.herokuapp.com/photos/${id}`
         );
         setPhoto(() => data);
         setFormData(() => data);
@@ -37,7 +37,7 @@ const PhotoDetails = () => {
 
     const updatePhotoDetail = async () => {
         const { data } = await authAxios.post(
-            `http://localhost:5005/photos/${id}`,
+            `https://life-in-photos-2022.herokuapp.com/photos/${id}`,
             formData
         );
         setPhoto(() => data);
@@ -46,7 +46,7 @@ const PhotoDetails = () => {
 
     const deletePhoto = async () => {
         const { data } = await authAxios.delete(
-            `http://localhost:5005/photos/${id}`
+            `https://life-in-photos-2022.herokuapp.com/photos/${id}`
         );
         navigateTo('/photos');
     };
@@ -98,13 +98,13 @@ const PhotoDetails = () => {
             //axios call, setlike post route => user+photoid
             if (!likeToggler) {
                 const { data } = await authAxios.post(
-                    `http://localhost:5005/photos/likedposts`,
+                    `https://life-in-photos-2022.herokuapp.com/photos/likedposts`,
                     { userID: user._id, photoID: photo._id }
                 );
                 setUser(() => data);
             } else {
                 const { data } = await authAxios.post(
-                    `http://localhost:5005/photos/deleteposts`,
+                    `https://life-in-photos-2022.herokuapp.com/photos/deleteposts`,
                     { userID: user._id, photoID: photo._id }
                 );
                 setUser(() => data);

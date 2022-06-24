@@ -46,7 +46,7 @@ const UserDetails = () => {
 
     const updateUserDetail = async () => {
         const { data } = await authAxios.post(
-            `http://localhost:5005/profile/${id}`,
+            `https://life-in-photos-2022.herokuapp.com/profile/${id}`,
             user
         );
         setUser(() => data);
@@ -55,7 +55,7 @@ const UserDetails = () => {
 
     const deleteUser = async () => {
         const { data } = await authAxios.delete(
-            `http://localhost:5005/profile/${id}`
+            `https://life-in-photos-2022.herokuapp.com/profile/${id}`
         );
         navigateTo('/');
     };

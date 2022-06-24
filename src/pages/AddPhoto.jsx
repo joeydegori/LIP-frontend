@@ -18,7 +18,7 @@ const AddPhoto = () => {
 
     const addNewPhoto = async () => {
         const { data } = await authAxios.post(
-            `http://localhost:5005/photos/newphoto`,
+            `https://life-in-photos-2022.herokuapp.com/photos/newphoto`,
             formData
         );
         navigateTo('/photos');

@@ -9,7 +9,9 @@ const Profile = () => {
     const { user, setUser } = useContext(UserContext);
 
     const getUser = async () => {
-        const { data } = await authAxios.get(`http://localhost:5005/profile`);
+        const { data } = await authAxios.get(
+            `https://life-in-photos-2022.herokuapp.com/profile`
+        );
         setUser(() => data);
     };
 

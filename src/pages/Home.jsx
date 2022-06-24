@@ -64,7 +64,7 @@ export default Home;
 // //authAxios is custom axios instance, it allows us to send Bearer tokens with the request
 // //We are using authAxios here to prevent unauthorized user to view the photos list
 // const getPhotos = async () => {
-//     const { data } = await authAxios.get(`http://localhost:5005/photos`);
+//     const { data } = await authAxios.get(`https://life-in-photos-2022.herokuapp.com/photos`);
 //     setPhotos(() => data);
 // };
 
