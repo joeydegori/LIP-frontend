@@ -23,6 +23,11 @@ const Photos = () => {
         setSearchTerm(e.target.value);
     };
 
+    const searchWord = {
+        color: '#fbf9f2',
+        fontWeight: 'bold',
+    };
+
     //This useEffect will execute getbooks function only one time when this page loads
     useEffect(() => {
         try {
@@ -34,11 +39,12 @@ const Photos = () => {
 
     return user ? (
         <div>
-            <h1>Photos List</h1>
+            <h1 style={searchWord}>Photos List</h1>
             <div>
-                <p>
+                <p style={searchWord}>
                     Search:{' '}
                     <input
+                        className='boxUserDets'
                         type='search'
                         value={searchTerm}
                         onChange={changeHandler}
@@ -57,7 +63,7 @@ const Photos = () => {
                 )
                 .map((photo) => {
                     return (
-                        <div key={photo._id}>
+                        <div className='photosPlacement' key={photo._id}>
                             <img src={photo.imageUrl} alt='Photos' />
                             <p>
                                 <button>

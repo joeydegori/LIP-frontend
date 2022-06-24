@@ -203,3 +203,7 @@ code {
     right: 600px;
     top: 230px;
 }
+
+.photosPlacement {
+    display: inline-block;
+}
