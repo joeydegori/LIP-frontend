@@ -46,7 +46,7 @@ const Home = () => {
     return user ? (
         <div>
             <h2 style={borderStyle}>
-                Welcome, {user.username} to Life in Photos!
+                Welcome, {user.username}, to Life in Photos!
             </h2>
 
             <img style={blueCorner} src={blueflower} />

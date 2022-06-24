@@ -20,6 +20,8 @@ const Login = () => {
 
     const [formData, setFormData] = useState(defaultFormData);
 
+    const [isLoading, setIsLoading] = useState(false);
+
     //Updating the user value from input field
     const changeHandler = (e) => {
         setFormData((prevData) => ({
@@ -30,21 +32,26 @@ const Login = () => {
 
     const submitFormData = async () => {
         try {
+            // console.log({ isLoadingBefore: isLoading });
+            setIsLoading(true);
+            // console.log({ isLoadingAfter: isLoading });
             const { data } = await axios.post(
                 `https://life-in-photos-2022.herokuapp.com/${loginState}`,
                 formData
             );
+            // console.log({ data });
             setUser(() => data);
             localStorage.setItem('token', JSON.stringify(data.token));
+            setIsLoading(false);
         } catch (error) {
             console.error(error);
         }
     };
 
-    const submitHandler = (e) => {
+    const submitHandler = async (e) => {
         e.preventDefault();
-        submitFormData();
-        navigateTo('/profile');
+        await submitFormData();
+        navigateTo('/');
     };
 
     const logoutHandler = (e) => {
@@ -86,6 +93,11 @@ const Login = () => {
         marginTop: '30px',
         transform: 'rotate(20deg)',
     };
+    console.log({ isLoading });
+
+    if (isLoading) {
+        return <div>Loading ...</div>;
+    }
 
     return user ? (
         <div>

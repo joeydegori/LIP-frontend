@@ -89,7 +89,7 @@ const NavBar = () => {
                 </NavLink>
             ) : (
                 <NavLink to='login' style={linkStyle}>
-                    Login
+                    Login & Register
                 </NavLink>
             )}
 
@@ -98,9 +98,7 @@ const NavBar = () => {
                     Profile
                 </NavLink>
             ) : (
-                <NavLink to='login' style={linkStyle}>
-                    Register
-                </NavLink>
+                <></>
             )}
             {user ? (
                 <div>
