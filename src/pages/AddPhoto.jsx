@@ -61,9 +61,16 @@ const AddPhoto = () => {
         right: '10px',
     };
 
+    const pStyle = {
+        color: '#fbf9f2',
+        fontWeight: 'bold',
+        margin: '10px',
+    };
+
     return user ? (
         <div>
             <h1 style={h1Style}>Add Post</h1>
+            <p style={pStyle}>Anything you post can be seen by every user!</p>
             <Form
                 className='secondFormData'
                 formData={formData}
