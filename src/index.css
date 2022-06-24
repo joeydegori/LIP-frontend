@@ -206,4 +206,89 @@ code {
 
 .photosPlacement {
     display: inline-block;
+    margin: 10px;
+}
+
+.choosePhoto {
+    background-color: white;
+    border-radius: 8px;
+    border-width: 0;
+    color: #9baf95;
+    cursor: pointer;
+    font-family: 'Joan';
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 10px;
+    padding: 10px 0px 10px 10px;
+    transition: all 200ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 10px;
+}
+.photoTitle {
+    background-color: #fbf9f2;
+    border-radius: 8px;
+    border-width: 0;
+    cursor: pointer;
+    line-height: 10px;
+    list-style: none;
+    padding: 10px 12px;
+    transition: all 200ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 5px;
+}
+
+.photoText {
+    color: #9baf95;
+    font-family: ' Joan';
+    font-size: 14px;
+    font-weight: bolder;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.submitPhotoDets {
+    background-color: #fbf9f2;
+    border-radius: 8px;
+    border-width: 0;
+    color: #9baf95;
+    cursor: pointer;
+    font-family: 'Joan';
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 10px;
+    list-style: none;
+    padding: 10px 12px;
+    transition: all 200ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.cancelPhotoDets {
+    background-color: #fbf9f2;
+    border-radius: 8px;
+    border-width: 0;
+    color: #9baf95;
+    cursor: pointer;
+    font-family: 'Joan';
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 10px;
+    list-style: none;
+    padding: 10px 12px;
+    transition: all 200ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 10px;
+}
+
+.editPhotoDets {
+    border-style: solid;
+    border-color: #fbf9f2;
+    border-radius: 8px;
+    margin: 10px;
 }

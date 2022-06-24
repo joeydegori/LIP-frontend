@@ -23,22 +23,39 @@ const LikedPosts = () => {
         getLikedPosts();
     }, []);
 
+    const h1Style = {
+        color: '#fbf9f2',
+        fontWeight: 'bold',
+    };
+
+    const photoList = {
+        display: 'inline-block',
+        margin: '1px',
+    };
+
     return user ? (
         <div>
-            <h1>Liked Posts</h1>
+            <h1 style={h1Style}>Liked Posts</h1>
             <div>
                 <p></p>
             </div>
 
             {likes.map((like) => {
-                console.log(like);
+                // console.log(like);
                 return (
                     <div key={like._id}>
-                        <img src={like.imageUrl} alt='Photos' />
+                        <img
+                            style={photoList}
+                            src={like.imageUrl}
+                            alt='Photos'
+                        />
 
                         <p>
-                            <button>
-                                <Link to={`/photos/${like._id}`}>
+                            <button className='photoTitle'>
+                                <Link
+                                    className='photoText'
+                                    to={`/photos/${like._id}`}
+                                >
                                     {like.title}
                                 </Link>
                                 {/* {console.log(photo._id)} */}

@@ -28,20 +28,33 @@ const Form = ({ formData, setFormData, submitHandler, changeHandler }) => {
             );
     };
 
+    const titleStyle = {
+        color: '#fbf9f2',
+        fontWeight: 'bold',
+        margin: '10px',
+    };
+
     return (
         <div>
             <form onSubmit={submitHandler}>
-                <label>Title: </label>
+                <label style={titleStyle}>Title: </label>
                 <input
+                    className='editPhotoDets'
                     type='text'
                     name='title'
                     value={formData.title}
                     onChange={changeHandler}
                 />
                 <br />
-                <input type='file' onChange={(e) => handleFileUpload(e)} />
+                <input
+                    className='choosePhoto'
+                    type='file'
+                    onChange={(e) => handleFileUpload(e)}
+                />
                 <br />
-                <button type='submit'>Submit</button>
+                <button className='submitPhotoDets' type='submit'>
+                    Submit
+                </button>
             </form>
         </div>
     );

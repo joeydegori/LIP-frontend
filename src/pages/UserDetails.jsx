@@ -151,9 +151,9 @@ const UserDetails = () => {
                 </div>
             )}
 
-            {user.role === 'admin' && (
+            {/* {user.role === 'admin' && (
                 <button onClick={deleteHandler}>Delete</button>
-            )}
+            )} */}
 
             {editToggler && (
                 <div>

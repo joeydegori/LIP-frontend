@@ -66,8 +66,11 @@ const Photos = () => {
                         <div className='photosPlacement' key={photo._id}>
                             <img src={photo.imageUrl} alt='Photos' />
                             <p>
-                                <button>
-                                    <Link to={`/photos/${photo._id}`}>
+                                <button className='photoTitle'>
+                                    <Link
+                                        className='photoText'
+                                        to={`/photos/${photo._id}`}
+                                    >
                                         {photo.title}
                                     </Link>
                                     {console.log(photo._id)}
@@ -82,3 +85,6 @@ const Photos = () => {
     );
 };
 export default Photos;
+
+//do npm start on the client folder of life in photos then if done git add git commit git push.
+//then gp to netify and it'll start deploying

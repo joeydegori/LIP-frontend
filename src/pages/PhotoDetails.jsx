@@ -122,21 +122,95 @@ const PhotoDetails = () => {
         // console.log(user._id, photo._id);
     };
 
+    const h1Style = {
+        color: '#fbf9f2',
+        fontWeight: 'bold',
+    };
+
+    const h3Style = {
+        color: '#fbf9f2',
+        fontWeight: 'bold',
+        border: '2px',
+        borderStyle: 'solid',
+        padding: '5px',
+        marginTop: '10px',
+        marginRight: '550px',
+        marginLeft: '550px',
+    };
+
+    const likeButton = {
+        backgroundColor: '#fbf9f2',
+        borderRadius: '8px',
+        borderWidth: ' 0',
+        cursor: 'pointer',
+        lineHeight: '10px',
+        listStyle: 'none',
+        padding: '10px 12px',
+        transition: 'all 200ms',
+        userSelect: 'none',
+        webkitUserSelect: 'none',
+        touchAction: 'manipulation',
+        margin: '10px 10px 10px 20px',
+    };
+
+    const editButton = {
+        backgroundColor: '#fbf9f2',
+        color: '#9baf95',
+        fontFamily: 'Joan',
+        fontWeight: 'bolder',
+        borderRadius: '8px',
+        borderWidth: '0',
+        cursor: 'pointer',
+        lineHeight: '10px',
+        listStyle: 'none',
+        padding: '12px 12px',
+        transition: 'all 200ms',
+        userSelect: 'none',
+        webkitUserSelect: 'none',
+        touchAction: 'manipulation',
+        fontSize: '14px',
+        textDecoration: 'none',
+        margin: '10px 10px 10px 0px',
+    };
+
+    const deleteButton = {
+        backgroundColor: '#fbf9f2',
+        borderRadius: '8px',
+        borderWidth: '0',
+        color: '#9baf95',
+        cursor: 'pointer',
+        fontFamily: 'Joan',
+        fontSize: '14px',
+        fontWeight: 'bolder',
+        lineHeight: '10px',
+        listStyle: 'none',
+        padding: '12px 12px',
+        transition: 'all 200ms',
+        userSelect: 'none',
+        webkitUserSelect: 'none',
+        touchAction: 'manipulation',
+        margin: '10px 10px 10px 0px',
+    };
+
     return user ? (
         <div>
-            <h1>Photo Details</h1>
+            <h1 style={h1Style}>Photo Details</h1>
             {photo && !editToggler && (
                 <div key={photo._id}>
-                    <p>Title: {photo.title}</p>
+                    <h3 style={h3Style}>{photo.title}</h3>
                     <img src={photo.imageUrl} />
                 </div>
             )}
-            <button onClick={likeHandler}>
+            <button style={likeButton} onClick={likeHandler}>
                 {likeToggler ? <FcLike /> : <FcLikePlaceholder />}
             </button>
-            <button onClick={editHandler}>Edit</button>
+            <button style={editButton} onClick={editHandler}>
+                Edit
+            </button>
             {user.role === 'admin' && (
-                <button onClick={deleteHandler}>Delete</button>
+                <button style={deleteButton} onClick={deleteHandler}>
+                    Delete
+                </button>
             )}
             {editToggler && (
                 <div>
@@ -146,7 +220,9 @@ const PhotoDetails = () => {
                         changeHandler={changeHandler}
                         editHandler={editHandler}
                     />
-                    <button onClick={editHandler}>Cancel</button>
+                    <button className='cancelPhotoDets' onClick={editHandler}>
+                        Cancel
+                    </button>
                 </div>
             )}
         </div>

@@ -18,9 +18,12 @@ const Home = () => {
         border: '2px',
         borderStyle: 'solid',
         padding: '10px',
-        marginRight: '350px',
-        marginLeft: '350px',
-        marginTop: '350px',
+        position: 'absolute',
+        top: '430px',
+        right: '300px',
+        // marginRight: '350px',
+        // marginLeft: '350px',
+        // marginTop: '350px',
     };
 
     const blueCorner = {
@@ -28,13 +31,16 @@ const Home = () => {
         weight: '300px',
         display: 'flex',
         alignItems: 'center',
-        marginTop: '-440px',
+        position: 'absolute',
+        top: '100px',
+        right: '800px',
     };
 
     const pinkRightMiddle = {
         display: 'flex',
-        marginLeft: '785px',
-        marginTop: '100px',
+        position: 'absolute',
+        top: '450px',
+        right: '10px',
     };
 
     return user ? (

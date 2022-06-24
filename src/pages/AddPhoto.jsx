@@ -4,6 +4,8 @@ import { useContext } from 'react';
 import Form from '../components/Form';
 import { authAxios } from '../customAxios/authAxios';
 import { useNavigate } from 'react-router-dom';
+import blueflower from '../images/blueflower.png';
+import pinkflower from '../images/pinkflower.png';
 
 const AddPhoto = () => {
     const defaultFormData = {
@@ -37,15 +39,40 @@ const AddPhoto = () => {
         }
     };
 
+    const h1Style = {
+        color: '#fbf9f2',
+        fontWeight: 'bold',
+    };
+
+    const blueCorner = {
+        height: '300px',
+        weight: '300px',
+        display: 'flex',
+
+        position: 'absolute',
+        top: '100px',
+        right: '800px',
+    };
+
+    const pinkRightMiddle = {
+        display: 'flex',
+        position: 'absolute',
+        top: '450px',
+        right: '10px',
+    };
+
     return user ? (
         <div>
-            <h1>Add Post</h1>
+            <h1 style={h1Style}>Add Post</h1>
             <Form
+                className='secondFormData'
                 formData={formData}
                 setFormData={setFormData}
                 submitHandler={submitHandler}
                 changeHandler={changeHandler}
             />
+            <img style={blueCorner} src={blueflower} />
+            <img style={pinkRightMiddle} src={pinkflower} />
         </div>
     ) : (
         <div></div>
