@@ -1,0 +1,205 @@
+body {
+    margin: 0;
+    font-family: 'Joan';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: 'Joan';
+    color: #fbf9f2;
+}
+
+.loginButton {
+    background-color: #fbf9f2;
+    border-radius: 8px;
+    border-width: 0;
+    color: #9baf95;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Joan';
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 10px;
+    list-style: none;
+    margin: 1px 1px 10px 1px;
+    padding: 10px 12px;
+    text-align: center;
+    transition: all 200ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.userDets {
+    color: #fbf9f2;
+    font-weight: bolder;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 484px;
+    margin-top: 10px;
+    padding-top: 0px;
+}
+
+.submitLogin {
+    background-color: #fbf9f2;
+    border-radius: 8px;
+    border-width: 0;
+    color: #9baf95;
+    cursor: pointer;
+    font-family: 'Joan';
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 10px;
+    list-style: none;
+    padding: 10px 12px;
+    transition: all 200ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    display: flex;
+    margin-left: 555px;
+    margin-top: 10px;
+}
+
+.loginState {
+    color: #fbf9f2;
+    font-weight: bold;
+}
+
+.boxUserDets {
+    border-style: solid;
+    border-color: #fbf9f2;
+    border-radius: 30px;
+}
+
+.logoutButton {
+    background-color: #fbf9f2;
+    border-radius: 8px;
+    border-width: 0;
+    color: #9baf95;
+    cursor: pointer;
+    font-family: 'Joan';
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 10px;
+    list-style: none;
+    padding: 10px 12px;
+    transition: all 200ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    display: flex;
+    margin-left: 555px;
+    margin-top: 10px;
+}
+
+.profileDetails {
+    background-color: #fbf9f2;
+    border-radius: 8px;
+    border-width: 0;
+    cursor: pointer;
+    line-height: 10px;
+    list-style: none;
+    padding: 10px 12px;
+    transition: all 200ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    display: flex;
+    margin-left: 540px;
+    margin-top: 10px;
+}
+
+.editProfile {
+    background-color: #fbf9f2;
+    border-radius: 8px;
+    border-width: 0;
+    color: #9baf95;
+    cursor: pointer;
+    font-family: 'Joan';
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 10px;
+    list-style: none;
+    padding: 10px 12px;
+    transition: all 200ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    display: flex;
+    margin-left: 570px;
+    margin-top: 10px;
+}
+
+.editProfileDets {
+    border-style: solid;
+    border-color: #fbf9f2;
+    border-radius: 8px;
+}
+
+.choosePhotoDets {
+    background-color: white;
+    border-radius: 8px;
+    border-width: 0;
+    color: #9baf95;
+    cursor: pointer;
+    font-family: 'Joan';
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 10px;
+    padding: 10px 0px 10px 10px;
+    transition: all 200ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    position: absolute;
+    right: 370px;
+    margin: 10px;
+}
+
+.submitProfileDets {
+    background-color: #fbf9f2;
+    border-radius: 8px;
+    border-width: 0;
+    color: #9baf95;
+    cursor: pointer;
+    font-family: 'Joan';
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 10px;
+    list-style: none;
+    padding: 10px 12px;
+    transition: all 200ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    position: absolute;
+    right: 510px;
+    margin: 30px;
+}
+
+.cancelProfileDets {
+    background-color: #fbf9f2;
+    border-radius: 8px;
+    border-width: 0;
+    color: #9baf95;
+    cursor: pointer;
+    font-family: 'Joan';
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 10px;
+    list-style: none;
+    padding: 10px 12px;
+    transition: all 200ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 10px;
+    position: absolute;
+    right: 600px;
+    top: 230px;
+}

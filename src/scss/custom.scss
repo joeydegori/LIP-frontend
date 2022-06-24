@@ -1,0 +1,21 @@
+// Include any default variable overrides here (though functions won't be available)
+
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+
+$enable-rounded: true;
+$enable-shadows: true;
+$enable-gradients: false;
+$enable-grid-classes: true;
+$enable-print-styles: true;
+
+$body-bg: #b2c7ac;
+
+// #b2c7ac
+$hr: 'white';
+
+$theme-colors: (
+    'success': rgb(203, 247, 203),
+);
+
+@import 'bootstrap';
