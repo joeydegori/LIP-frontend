@@ -16,7 +16,6 @@ const Form = ({ formData, setFormData, submitHandler, changeHandler }) => {
         service
             .uploadImage(uploadData)
             .then((response) => {
-                console.log('response is: ', response);
                 // response carries "fileUrl" which we can use to update the state
                 setFormData(() => ({
                     ...formData,

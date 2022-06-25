@@ -73,7 +73,6 @@ const Photos = () => {
                                     >
                                         {photo.title}
                                     </Link>
-                                    {console.log(photo._id)}
                                 </button>
                             </p>
                         </div>

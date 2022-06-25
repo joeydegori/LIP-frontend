@@ -27,7 +27,6 @@ const UserDetails = () => {
         service
             .uploadImage(uploadData)
             .then((response) => {
-                console.log('response is: ', response);
                 // response carries "fileUrl" which we can use to update the state
                 setUser(() => ({
                     ...user,
@@ -82,7 +81,6 @@ const UserDetails = () => {
     };
 
     const changeHandler = (e) => {
-        console.log('hi');
         setUser({ ...user, [e.target.name]: e.target.value });
     };
 

@@ -15,7 +15,7 @@ const AddPhoto = () => {
 
     const { user } = useContext(UserContext);
     const [formData, setFormData] = useState(defaultFormData);
-    console.log({ formData });
+
     const navigateTo = useNavigate();
 
     const addNewPhoto = async () => {

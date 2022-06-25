@@ -41,7 +41,6 @@ const LikedPosts = () => {
             </div>
 
             {likes.map((like) => {
-                // console.log(like);
                 return (
                     <div key={like._id}>
                         <img
