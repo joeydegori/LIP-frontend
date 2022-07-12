@@ -14,6 +14,7 @@ import AddPhoto from './pages/AddPhoto';
 import PhotoDetails from './pages/PhotoDetails';
 import LikedPosts from './pages/LikedPosts';
 import UserDetails from './pages/UserDetails';
+import Users from './pages/Users';
 
 //providers
 import { UserProvider } from './contexts/UserContext';
